@@ -9,7 +9,8 @@ export const MENU = [
 		price: 20000,
 		pedas: 3,
 		desc: "Ayam crispy digeprek dengan sambal bawang.",
-		emoji: "🍗"
+		emoji: "🍗",
+		image: "/menu/geprek.jpg"
 	},
 	{
 		id: 2,
@@ -18,7 +19,8 @@ export const MENU = [
 		price: 25000,
 		pedas: 2,
 		desc: "Ayam goreng dipenyet bersama sambal terasi.",
-		emoji: "🍗"
+		emoji: "🍗",
+		image: "/menu/penyet.jpg"
 	},
 	{
 		id: 3,
@@ -27,7 +29,8 @@ export const MENU = [
 		price: 25000,
 		pedas: 1,
 		desc: "Ayam goreng dengan lalapan segar dan sambal.",
-		emoji: "🥬"
+		emoji: "🥬",
+		image: "/menu/lalapan.jpg"
 	},
 	{
 		id: 4,
@@ -36,7 +39,8 @@ export const MENU = [
 		price: 25000,
 		pedas: 1,
 		desc: "Ayam bakar bumbu manis gurih.",
-		emoji: "🔥"
+		emoji: "🔥",
+		image: "/menu/bakar.jpg"
 	},
 	{
 		id: 5,
@@ -45,7 +49,8 @@ export const MENU = [
 		price: 25000,
 		pedas: 30000,
 		desc: "Ayam berbumbu rempah ala Bali, empuk meresap.",
-		emoji: "🍖"
+		emoji: "🍖",
+		image: "/menu/betutu.jpg"
 	},
 	{
 		id: 6,
@@ -54,7 +59,8 @@ export const MENU = [
 		price: 30000,
 		pedas: 3,
 		desc: "Ayam bakar pedas khas Lombok.",
-		emoji: "🌶️"
+		emoji: "🌶️",
+		image: "/menu/taliwang.jpg"
 	},
 	{
 		id: 7,
@@ -63,7 +69,8 @@ export const MENU = [
 		price: 25000,
 		pedas: 3,
 		desc: "Ayam tumis cabai rica-rica yang pedas segar.",
-		emoji: "🌶️"
+		emoji: "🌶️",
+		image: "/menu/rica-rica.jpg"
 	},
 	{
 		id: 8,
@@ -72,7 +79,8 @@ export const MENU = [
 		price: 20000,
 		pedas: 2,
 		desc: "Ayam dengan taburan sarundeng gurih.",
-		emoji: "🍗"
+		emoji: "🍗",
+		image: "/menu/sarundeng.jpg"
 	}
 ]
 
