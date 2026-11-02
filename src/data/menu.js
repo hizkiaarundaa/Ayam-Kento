@@ -51,7 +51,7 @@ export const MENU = [
 		id: 6,
 		name: "Ayam Taliwang",
 		category: "Bakar",
-		price: 25000,
+		price: 30000,
 		pedas: 3,
 		desc: "Ayam bakar pedas khas Lombok.",
 		emoji: "🌶️"
@@ -60,7 +60,7 @@ export const MENU = [
 		id: 7,
 		name: "Ayam Rica-rica",
 		category: "Khas Nusantara",
-		price: 22000,
+		price: 25000,
 		pedas: 3,
 		desc: "Ayam tumis cabai rica-rica yang pedas segar.",
 		emoji: "🌶️"
@@ -69,7 +69,7 @@ export const MENU = [
 		id: 8,
 		name: "Ayam Sarundeng",
 		category: "Khas Nusantara",
-		price: 22000,
+		price: 20000,
 		pedas: 2,
 		desc: "Ayam dengan taburan sarundeng gurih.",
 		emoji: "🍗"
