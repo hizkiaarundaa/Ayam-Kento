@@ -5,6 +5,8 @@ import SearchBar from "./components/SearchBar"
 import CategoryFilter from "./components/CategoryFilter"
 import MenuGrid from "./components/MenuGrid"
 import CartBar from "./components/CartBar"
+import Hero from "./components/Hero"
+import FeaturedRow from "./components/FeaturedRow"
 
 export default function App() {
 	const [query, setQuery] = useState("")
@@ -19,6 +21,10 @@ export default function App() {
 			),
 		[query, category]
 	)
+
+	// di dalam App(), setelah deklarasi `items`:
+	const isBrowsing = query.trim() === "" && category === "Semua"
+	const goToMenu = () => document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" })
 
 	const add = (id) => setCart((c) => ({ ...c, [id]: (c[id] || 0) + 1 }))
 	const remove = (id) =>
@@ -40,17 +46,42 @@ export default function App() {
 					value={query}
 					onChange={setQuery}
 				/>
-				<CategoryFilter
-					categories={CATEGORIES}
-					active={category}
-					onSelect={setCategory}
-				/>
-				<MenuGrid
-					items={items}
-					cart={cart}
-					onAdd={add}
-					onRemove={remove}
-				/>
+				{isBrowsing && (
+					<>
+						<Hero onOrder={goToMenu} />
+						<FeaturedRow
+							title="Favorit pelanggan"
+							subtitle="Paling sering dipesan"
+							items={MENU.filter((m) => m.favorit)}
+							cart={cart}
+							onAdd={add}
+							onRemove={remove}
+						/>
+						<FeaturedRow
+							title="Rekomendasi untukmu"
+							subtitle="Pilihan dari dapur Ayam Kento"
+							items={MENU.filter((m) => m.rekomendasi)}
+							cart={cart}
+							onAdd={add}
+							onRemove={remove}
+						/>
+					</>
+				)}
+				<div
+					id="menu"
+					className="scroll-mt-20 space-y-4">
+					<CategoryFilter
+						categories={CATEGORIES}
+						active={category}
+						onSelect={setCategory}
+					/>
+					<MenuGrid
+						items={items}
+						cart={cart}
+						onAdd={add}
+						onRemove={remove}
+					/>
+				</div>
 			</main>
 			<CartBar
 				count={count}
